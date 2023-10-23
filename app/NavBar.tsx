@@ -11,9 +11,7 @@ const NavBar = () => {
         {href: "/", label: "Dashboard"},
         {href: "/issues", label: "Issues"}
     ];
-
-    const activePath = usePathname();
-    console.log(activePath);
+    const activePath = usePathname()
 
     return (
         <nav className='flex space-x-6 border-b mb-5 px-5 h-14 items-center'>
