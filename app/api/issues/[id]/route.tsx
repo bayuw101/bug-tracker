@@ -1,7 +1,6 @@
 import { issueSchema } from "@/app/validationSchema";
 import prisma from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-import z from "zod";
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
     const body = await request.json();
