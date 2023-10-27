@@ -21,7 +21,7 @@ const AssigneeSelect = ({ issue }: { issue: Issue }) => {
 
     return (
         <>
-            <Select.Root onValueChange={assignIssue}>
+            <Select.Root onValueChange={assignIssue} defaultValue={issue.assignedToUserId ? issue.assignedToUserId : 'unassigned'}>
                 <Select.Trigger placeholder='Assign...' />
                 <Select.Content>
                     <Select.Group>
