@@ -17,5 +17,5 @@ bun dev
 
 ## Demo
 
-You can check out [Issue Tracker Project]([https://github.com/vercel/next.js/](https://bug-tracker-swart.vercel.app/)) - your feedback and contributions are welcome!
+You can check out [Issue Tracker Project](https://bug-tracker-swart.vercel.app/) - your feedback and contributions are welcome!
 
