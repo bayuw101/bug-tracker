@@ -50,14 +50,15 @@ const NavLinks = () => {
 
 const AuthStatus = () => {
     const { status, data } = useSession();
-    const profilePict = data?.user?.image ? data!.user!.image : defaultAvatar.src!;
+    const profileFallback = data?.user?.name ? data!.user!.name.charAt(0) : "?";
     if (status === "loading") return <Skeleton width="3rem" height="20px"/>;
     if (status === 'unauthenticated') return <Link className='nav-link' href="/api/auth/signin">Sign In</Link>;
+    console.log(data)
     return (
         <Box>
             <DropdownMenu.Root>
                 <DropdownMenu.Trigger>
-                    <Avatar src={profilePict} fallback="?" size="2" radius="full" referrerPolicy='no-referrer' />
+                    <Text><Avatar src={data?.user?.image!} fallback={profileFallback} size="2" radius="full" referrerPolicy='no-referrer' /></Text>
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>
                     <DropdownMenu.Label>
